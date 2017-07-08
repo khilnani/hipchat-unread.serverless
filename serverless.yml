@@ -1,0 +1,30 @@
+service: hipchat
+
+provider:
+    name: aws
+    runtime: python2.7
+    memorySize: 128
+    stage: dev
+    region: us-east-1
+    versionFunctions: false
+    cfLogs: true
+    environment:
+        HIPCHAT_API_URL: https://api.hipchat.com/v2/
+package:
+    exclude:
+        - .npmignore
+functions:
+    unread:
+        handler: handler.unread
+        description: Get unread hipchat messages
+        timout: 300
+        events:
+            - http:
+                path: hipchat/unread
+                method: get
+                private: true
+resources:
+    Resources:
+        UnreadLogGroup:
+            Properties:
+                RetentionInDays: "7"
