@@ -141,7 +141,7 @@ Sample JSON Output
 Once you have an api, you can call it from where ever you want. Since we (or I) want to use a phone as a remote, we'll use [Workflow on iOS](https://workflow.is). 
 
 - Download the app from the app store - https://workflow.is/download
-- Launch ./files/Hipchat%20Unread%20Sample.wflow?raw=true in Safari on your iOS device
+- Launch https://github.com/khilnani/hipchat-unread.serverless/blob/master/files/Hipchat%20Unread%20Sample.wflow?raw=true in Safari on your iOS device
     - Open the file using the Workflow app. 
     - It will create a workflow called 'Hipchat Unread Sample'
 - Replace `https://APIID.execute-api.us-east-1.amazonaws.com/dev/hipchat/unread` with the url from the deployment stack output.
