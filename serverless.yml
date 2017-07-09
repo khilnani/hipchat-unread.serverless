@@ -22,7 +22,7 @@ functions:
             - http:
                 path: hipchat/unread
                 method: get
-                private: true
+                private: false
 resources:
     Resources:
         UnreadLogGroup:
